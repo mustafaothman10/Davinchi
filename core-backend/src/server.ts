@@ -7,7 +7,7 @@ const server = Fastify({
 
 server.get("/", async () => {
   return {
-    message: "AI Agent API is running 🚀",
+    message: "server is running",
   };
 });
 

@@ -1,3 +1,5 @@
 node_modules
 ./core-frontend/node_modules
 ./core-services/node_modules
+
+.tsbuildinfo

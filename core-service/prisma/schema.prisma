@@ -1,0 +1,65 @@
+//Main Application Schema
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/.prisma/client-postgres"
+}
+
+enum Gender {
+  male
+  female
+  other
+}
+
+model Department {
+  id            String @id
+  name          String
+  creating_date String
+  description   String
+}
+
+model Doctor {
+  id            String @id
+  first_name    String
+  second_name   String
+  birth_date    String
+  gender        Gender
+  first_location String
+}
+
+model Floor {
+  id          String @id
+  number      String
+  description String
+}
+
+model Hospital {
+  id          String @id
+  name        String
+  description String
+}
+
+model MainDepartment {
+  id          String @id
+  name        String
+  description String
+}
+
+model Nurse {
+  id           String @id
+  first_name   String
+  last_name    String
+  date_of_birth String
+  gender       Gender
+  location     String
+}
+
+model Patient {
+  id       String @id
+  age      Int
+  location String
+}

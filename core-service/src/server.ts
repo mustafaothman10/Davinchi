@@ -2,7 +2,19 @@
 import Fastify from "fastify";
 
 const server = Fastify({
-  logger: true,
+  logger: {
+    level: process.env.LOG_LEVEL ?? 'info',
+    transport:
+      process.env.NODE_ENV !== 'production'
+        ? {
+          target: 'pino-pretty',
+          options: {
+            colorize: true,
+            translateTime: 'SYS:standard',
+          },
+        }
+        : undefined,
+  },
 });
 
 server.get("/", async () => {

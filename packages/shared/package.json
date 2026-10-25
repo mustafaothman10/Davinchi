@@ -1,0 +1,30 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "shared types and dtos and interfaces for the davinchi monorepo",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/cjs/index.d.ts"
+    },
+    "./assets/*": "./assets/*"
+  },
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json && copyfiles -u 1 \"assets/**/*\" dist/cjs",
+    "build:esm": "tsc -p tsconfig.esm.json && copyfiles -u 1 \"assets/**/*\" dist/esm",
+    "watch": "tsc --watch",
+    "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "copyfiles": "^2.4.1",
+    "typescript": "^5.9.3"
+  }
+}

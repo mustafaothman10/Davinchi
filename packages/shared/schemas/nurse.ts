@@ -1,4 +1,4 @@
-import {z} from "zod";
+import z from "zod";
 
 const NurseSchema = z.object({
   id: z.string(),

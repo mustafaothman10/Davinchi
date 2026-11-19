@@ -5,3 +5,7 @@
    prisma: the object relational mapper
     
 2- core-frontend
+
+How to run this project:
+1- Starting and Running the project: 
+   

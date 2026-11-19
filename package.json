@@ -6,6 +6,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "workspaces": [
+    "packages/*",
+    "core-service"
+  ],
+  "scripts": {
+    "build":"docker compose -up",
+    "build:shared": "cd packages/shared && npm run build"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.8.1",

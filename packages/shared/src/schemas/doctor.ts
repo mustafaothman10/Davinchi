@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const FloorSchema = z.object({
+const DoctorSchema = z.object({
     id: z.string(),
     first_name: z.string(),
     second_name: z.string(),
@@ -9,4 +9,4 @@ const FloorSchema = z.object({
     first_location: z.string(),
 });
 
-export type Floor = z.infer<typeof FloorSchema>;
+export type Doctor = z.infer<typeof DoctorSchema>;

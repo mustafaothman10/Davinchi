@@ -1,0 +1,6 @@
+export  * from './department'
+export  * from './doctor'
+export  * from './floor'
+export  * from './main-department'
+export  * from './nurse'
+export * from './patient'

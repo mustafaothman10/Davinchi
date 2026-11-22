@@ -1,7 +1,7 @@
 {
-  "name": "shared",
+  "name": "@davinchi/shared",
   "version": "1.0.0",
-  "description": "shared types and dtos and interfaces for the davinchi monorepo",
+  "description": "shared types and helpers and interfaces for the davinchi monorepo",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
